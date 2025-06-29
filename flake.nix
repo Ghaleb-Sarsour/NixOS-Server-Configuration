@@ -21,7 +21,6 @@
           # NixOS Modules
           modules = [
             ./configuration.nix
-            ./hardware-configuration.nix
           ];
         }; 
       };

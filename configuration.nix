@@ -6,6 +6,11 @@
   imports =
     [ 
       ./hardware-configuration.nix
+      # import core-configs below.
+      ./core-configs/firewall.nix # Firewall Settings.
+      ./core-configs/packages.nix # System Packages.
+      ./core-configs/ssh.nix # SSH Settings.
+      ./core-configs/arion.nix # Arion Settings (Used to setup docker images).
     ];
 
   # Bootloader.
@@ -36,12 +41,14 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  # Replace username with your own username if desired. 
-  users.users.username = {
+  # Replace extServer with your own username if desired.
+ # WARNING: If you change the default username, make sure to change:
+ # 1. enable user login in ssh.nix
+ # 2. user settings in arion-docker.nix
+  users.users.extServer = {
     isNormalUser = true;
-    description = "ext4";
+    description = "Main server user";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
   };
 
   # Enable flakes.
