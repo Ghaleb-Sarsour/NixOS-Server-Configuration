@@ -1,19 +1,22 @@
+# Documentation: https://docker-minecraft-server.readthedocs.io/en/latest/ 
+# https://hub.docker.com/r/itzg/minecraft-server 
+
 {pkgs, ...}:
 
 {
-  project.name = "minecraft-java";
-  services.mc = {
+  project.name = "mc-java";
+  services.mc-java = {
      service = {
       image = "itzg/minecraft-server";
       tty = true;
-      stdin_open = true;
-      ports = [
-        "25565:25565"
-      ];
-      enviornment.EULA = "TRUE";
-      volumes = [
-          "./data:/data"
-      ];
+      ports = [ "25565:25565" ];
+      environment = {
+        EULA = "TRUE";
+        GAMEMODE = "survival";
+        DIFFICULTY = "hard";
+      };
+      volumes = [ "./data:/data" ];
+      restart = "unless-stopped";
     };
   };
 }
