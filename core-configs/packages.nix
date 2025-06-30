@@ -2,7 +2,7 @@
 
 {
   # Add any packages here
-  enviornment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
 
     # Core Packages
     coreutils
