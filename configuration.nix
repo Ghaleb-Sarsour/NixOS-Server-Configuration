@@ -45,7 +45,7 @@
  # WARNING: If you change the default username, make sure to change:
  # 1. enable user login in ssh.nix
  # 2. user settings in arion-docker.nix
-  users.users.extServer = {
+  users.users.extserver = {
     isNormalUser = true;
     description = "Main server user";
     extraGroups = [ "networkmanager" "wheel" ];
