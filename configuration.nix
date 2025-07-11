@@ -13,13 +13,10 @@
       ./core-configs/arion.nix # Arion Settings (Used to setup docker images).
     ];
 
-  # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
-
-  # Enable networking
   networking.networkmanager.enable = true;
 
   # Set your time zone.
@@ -41,7 +38,7 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  # Replace extServer with your own username if desired.
+  # Replace extserver with your own username if desired.
  # WARNING: If you change the default username, make sure to change:
  # 1. enable user login in ssh.nix
  # 2. user settings in arion-docker.nix

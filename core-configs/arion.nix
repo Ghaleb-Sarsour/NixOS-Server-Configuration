@@ -8,5 +8,5 @@
   virtualisation.podman.defaultNetwork.settings.dns_enabled = true; 
 
   # Add user to podman group (Change this if you change username)
-  users.extraUsers.extServer.extraGroups = ["podman"];
+  users.extraUsers.extserver.extraGroups = ["podman"];
 }
