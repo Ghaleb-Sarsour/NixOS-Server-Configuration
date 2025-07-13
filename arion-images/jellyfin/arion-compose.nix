@@ -10,7 +10,7 @@
       environment = {
         PUID = 1000;
         PGID = 1000;
-        TZ = Etc/UTC;
+        TZ = [ "Etc/UTC" ];
       };
       volumes = [
         "./library:/config"
