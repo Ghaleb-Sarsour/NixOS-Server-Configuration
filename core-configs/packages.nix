@@ -10,8 +10,6 @@
     wget
     git
     vim
-    certbot
-
 
     # Docker
     arion
