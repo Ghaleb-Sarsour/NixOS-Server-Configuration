@@ -4,7 +4,7 @@
   # Firewall Settings.
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 22 80 81 443 ];
+    allowedTCPPorts = [ 22 80 81 443 8096 ];
     allowedUDPPorts = [ ];
 
 
