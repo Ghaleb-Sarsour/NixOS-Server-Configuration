@@ -10,6 +10,7 @@
     wget
     git
     vim
+    certbot
 
 
     # Docker
